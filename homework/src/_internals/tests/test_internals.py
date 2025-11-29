@@ -1,6 +1,6 @@
 import sys
 
-from ...wordcount import parse_args
+from ...wordcount import parse_args, preprocess_lines
 from ..read_all_lines import read_all_lines
 
 
@@ -25,3 +25,9 @@ def test_read_all_lines():
         "Analytics refers to the systematic computational analysis of data" in line
         for line in lines
     )
+
+
+def test_preprocess_lines():
+    lines = ["  Hello, World! ", "This is a Test.", "3th LINE for test."]
+    preprocessed = preprocess_lines(lines)
+    assert preprocessed == ["hello, world!", "this is a test.", "3th lines for test."]
