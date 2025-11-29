@@ -27,7 +27,7 @@ def preprocess_lines(lines):
     pass
 
 
-def split_into_words(lines):
+def split_into_words(preprocessed_lines):
     pass
 
 
@@ -35,7 +35,7 @@ def count_words(words):
     pass
 
 
-def write_word_counts(word_counts, output_folder):
+def write_word_counts(output_folder, word_counts):
     pass
 
 
@@ -45,4 +45,4 @@ def main():
     preprocessed_lines = preprocess_lines(lines)
     words = split_into_words(preprocessed_lines)
     word_counts = count_words(words)
-    write_word_counts(word_counts, output_folder)
+    write_word_counts(output_folder, word_counts)
